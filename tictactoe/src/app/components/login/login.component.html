@@ -1,0 +1,17 @@
+<div class="flex-container">
+  <form class="login" [formGroup]="playersForm" (ngSubmit)="navigateToGame()">
+    <div class="login__name__title">Please enter players names:</div>
+    <input [(ngModel)]="playerOne.name" formControlName="firstPlayer" class="login__name">
+    <div class="login__name__error" *ngIf="playersForm.get('firstPlayer').dirty && getPlayerName(playerOne) === ''">
+      Please enter player's name.
+    </div>
+    <input [(ngModel)]="playerTwo.name" formControlName="secondPlayer" class="login__name">
+    <div class="login__name__error" *ngIf="playersForm.get('secondPlayer').dirty  && getPlayerName(playerTwo) === ''">
+      Please enter player's name.
+    </div>
+    <div class="login__name__error" *ngIf="getPlayerName(playerTwo) === getPlayerName(playerOne) && getPlayerName(playerOne) !== ''">
+      Players should have different names.
+    </div>
+    <button class="login__button" type="submit">play!</button>
+  </form>
+</div>
