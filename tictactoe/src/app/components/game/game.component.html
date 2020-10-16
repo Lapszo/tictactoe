@@ -1,0 +1,35 @@
+<div class="game-container">
+  <div class="game__players">
+    <div [ngClass]="{'game__players__name--actual': getGameTurn() && getWinnerName() == null}"
+         class="game__players__name">
+      {{playerOne.name}}
+    </div>
+    <div [ngClass]="{'game__players__name--actual': !getGameTurn() && getWinnerName() == null}"
+         class="game__players__name">
+      {{playerTwo.name}}
+    </div>
+  </div>
+  <div class="game">
+    <app-field [fieldNumber]="i" class="game__field" *ngFor="let item of [].constructor(9); index as i"></app-field>
+  </div>
+</div>
+
+<div class="modal" *ngIf="showModal()">
+  <div class="modal__wrapper">
+    <div class="modal__content">
+      <div class="winner">
+        <div class="winner__lable" *ngIf="getWinnerName() != null">The winner is:</div>
+        <div class="winner__name" *ngIf="getWinnerName() != null">
+          {{getWinnerName()}}
+        </div>
+        <div class="winner__status" *ngIf="getNumberOfGameMoves() === 9 && getWinnerName() == null">
+          draw!
+        </div>
+      </div>
+      <div class="winner__navigate">
+        <button class="winner__navigate__button" (click)="navigateToGame()">play again?</button>
+        <button class="winner__navigate__button" [routerLink]="''">return to login</button>
+      </div>
+    </div>
+  </div>
+</div>

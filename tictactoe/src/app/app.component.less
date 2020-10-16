@@ -1,0 +1,27 @@
+.container{
+  background-color: rgba(105, 189, 210, 0.5);
+  min-height: 100vh;
+}
+
+.menu{
+  min-height: 20vh;
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+  &__img{
+    max-height: 150px;
+    cursor: pointer;
+    &:focus{
+      outline: 0;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .logo {
+    &__img {
+      max-height: 120px;
+    }
+  }
+}
