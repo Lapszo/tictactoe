@@ -7,5 +7,4 @@ export class LoginService {
   loggedIn = false;
   constructor() { }
 
-
 }

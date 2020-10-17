@@ -108,5 +108,6 @@ export class GameService {
      this.winner = actualMove.player;
    }
   }
+
 }
 

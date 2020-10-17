@@ -3,11 +3,13 @@ import {Player} from '../../../models/Player';
 import {GameService} from '../../../services/game/game.service';
 import {Move} from '../../../models/Move';
 import {faCircle, faTimes} from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-field',
   templateUrl: './field.component.html',
   styleUrls: ['./field.component.less']
 })
+
 export class FieldComponent implements OnInit {
 
   @Input() fieldNumber: any;
