@@ -11,6 +11,7 @@ import {GameService} from '../../services/game/game.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.less']
 })
+
 export class LoginComponent implements OnInit {
   playerOne: Player;
   playerTwo: Player;

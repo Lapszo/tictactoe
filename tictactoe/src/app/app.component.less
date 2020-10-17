@@ -4,7 +4,7 @@
 }
 
 .menu{
-  min-height: 20vh;
+  max-height: 20vh;
 }
 
 .logo{
@@ -13,6 +13,7 @@
   &__img{
     max-height: 150px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
     &:focus{
       outline: 0;
     }
@@ -21,7 +22,7 @@
 @media (max-width: 600px) {
   .logo {
     &__img {
-      max-height: 120px;
+      max-height: 110px;
     }
   }
 }

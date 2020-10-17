@@ -4,7 +4,7 @@
          class="game__players__name">
       {{playerOne.name}}
     </div>
-    <div [ngClass]="{'game__players__name--actual': !getGameTurn() && getWinnerName() == null}"
+    <div [ngClass]="{'game__players__name--actual': !getGameTurn() && getNumberOfGameMoves() !== 9}"
          class="game__players__name">
       {{playerTwo.name}}
     </div>
@@ -33,3 +33,4 @@
     </div>
   </div>
 </div>
+{{getWinnerName()}}
