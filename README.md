@@ -12,3 +12,6 @@ Version 2.0.0 (multiplayer)
 - Add normal login with name, email and password 
 - Only 2 players still available
 - Only version 3x3 still avaiable
+
+Used technologies:
+Angular 10, Typescript, Less(CSS), Html.
